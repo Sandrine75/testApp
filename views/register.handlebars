@@ -1,0 +1,48 @@
+
+<h2 class ="text-center">Vous êtes fan d'une Star ? </h2> <h6 class="text-center"> Un chanteur, un écrivain, un peintre...</h6><br>
+<!-- couleur textes CSS/Boostrap ligne 1319 A 1325 -->
+<h6 class="text-centor">Partagez les anecdotes les plus secrètes sur votre célébrité <br> sur notre plateforme collaborative Celebetrip<br><br> Et baladez-vous pour découvrir sur votre mobile :  </h6>  <!-- texte h6 CSS/boostrap ligne 1288--> 
+<h3 class ="text-center">"Le Paris d'une célébrité d'hier ou d'aujourd'hui" </h3><br><br>
+
+
+
+
+
+<h2 class="page-header">S'enregistrer</h2>
+{{#if user}}
+        <div class="alert alert-danger">Pseudo déjà existant. Choisissez un nouveau pseudo</div> 
+{{/if}}
+{{#if mail}}
+        <div class="alert alert-danger">Email déjà existant. Essayez de vous connecter</div> 
+{{/if}} 
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+
+
+<form method="post" action="/users/register">
+   <div class="form-group">
+    <label>Nom</label>
+    <input type="text" class="form-control" placeholder="Nom" name="name">
+  </div>
+  <div class="form-group">
+    <label>Pseudo</label>
+    <input type="text" class="form-control" placeholder="Pseudo" name="username">
+  </div><!-- couleur texte interieur champs CSS/boostrap 2598 -->
+   <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label>Mot de passe</label>
+    <input type="password" class="form-control" placeholder="Mot de passe" name="password">
+  </div>
+  <div class="form-group">
+    <label>Confirmer son mot de passe</label>
+    <input type="password" class="form-control" placeholder="Mot de passe" name="password2">
+  </div><br>
+  <button type="submit" class="btn btn-default">Valider</button>
+</form><!-- taille bouton CSS/bosstrap ligne 3019 -->
+
